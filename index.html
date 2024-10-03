@@ -4,88 +4,61 @@
     <meta charset="UTF-8">
     <meta name="version" content="1.0.1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> VTS</title>
+    <title>VTS</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script> <!-- Link to JavaScript file -->
 </head>
-<body>
-    <header>
-        <h1>Varun Tarikere Shankarappa</h1>
-        <p>MS CS @UMass Amherst</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body onload="loadContent('experience')">
+    <div class="content-body">
+        <div class="header-content">
+            <img src="pics/varun.jpg" alt="Profile Picture" class="profile-pic">
+            <h1 class= "name">Varun Tarikere Shankarappa</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadContent('experience')">Experience</a></li>
+                    <li><a href="#" onclick="loadContent('academics')">Academics</a></li>
+                    <li><a href="#" onclick="loadContent('projects')">Projects</a></li>
+                    <li><a href="#" onclick="loadContent('gallery')">Gallery</a></li>
+                </ul>
+            </nav>
+            <section id="contact">
+                <div class="contact-container">
+                    <!-- Version: 1.0.0 -->
+                     <br/>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:varundevang@gmail.com">varundevang@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(413) 404-2490</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/tsvarun" target="_blank">linkedin.com/in/tsvarun</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/varunsdevang" target="_blank">Github</a>
+                    </div>
+            </section>
+        </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="pics/varun.jpg" alt="Photo of Varun Tarikere Shankarappa" style="width:200px;height:auto;">
-        <p>
-            Hello! I'm Varun Tarikere Shankarappa, a dedicated and passionate computer science student currently pursuing my Master's degree at the University of Massachusetts, Amherst. With a perfect GPA of 4.00, I've engaged deeply in coursework covering Distributed Systems, Software Engineering, Reinforcement Learning, Internet Security, Advanced Natural Language Processing (NLP), and Robotics. My academic journey is built upon a solid foundation from my B.Tech in Computer Science and Engineering at PES University, Bengaluru, where I first cultivated my technical skills and curiosity in fields like Data Structures, Computer Networks, and Cloud Computing.
-            
-            Professionally, I have amassed over two years of experience as a Software Development Engineer at Eagleview in Bengaluru, where I developed and maintained robust software services, particularly focusing on scalable Go Rest and GRPC microservices. My work there significantly improved system performance, reduced latency, and optimized costs, showcasing my ability to deliver efficient and scalable solutions. One of my notable achievements was pioneering a serverless service orchestrator with AWS Step Functions and Lambda, which led to a remarkable 60% reduction in cycle time.
-            
-            Beyond my professional experience, I have undertaken various projects that demonstrate my versatility and innovative spirit. These include developing a human-following robot, fine-tuning Transformer models for quote classification and interpretation, and prototyping a stock trading application to explore distributed systems concepts. My skills extend across multiple programming languages and technologies, including Golang, Python, AWS, Docker, and Kubernetes, and I am well-versed in methodologies such as Agile, serverless design, and microservices architecture.
-            
-            I am driven by a relentless pursuit of knowledge and excellence in the field of computer science, always eager to tackle new challenges and contribute to cutting-edge technological advancements. If you have any questions or would like to discuss potential opportunities, feel free to reach out to me at varundevang@gmail.com or connect with me on LinkedIn.
-            
-            Looking forward to connecting with like-minded professionals and contributing to impactful projects!</p>
-    </section>
 
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>MS in Computer Science, University of Massachusetts, Amherst</strong></li>
-            <p><strong>GPA : </strong> 4 </br></br>
-                <strong>Coursework : </strong> Distributed Systems, Software Engineering, Reinforcement Learning, Internet Security, Advanced Natural Language Processing (NLP), and Robotics
-            </p>
+        <div class="main-content">
+            <section id="dynamic-content">
+                <!-- This section will change dynamically based on menu selection -->
+                <h2>Welcome to Varun's Website</h2>
+                <p>This is a brief introduction about Varun Tarikere Shankarappa.</p>
+            </section>
+        </div>
+    </div>
+        
 
-            <li><strong>B.Tech in Computer Science and Engineering, PES University, Bengaluru, India</strong></li>
-            <p><strong>GPA : </strong> 8.31/10 </br></br>
-                <strong>Coursework : </strong>  Data Structures, Computer Networks, and Cloud Computing etc.
-            </p>
-        </ul>
-    </section>
 
-    <section>
-        <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Software Development Engineer - I, Eagleview, Bengaluru</strong></li>
-            <p><ul>
-                <li>Developed, designed, and maintained Assess services, an online drone imagery tool for property assessment.</li>
-                <li>Implemented scalable Go Rest and GRPC microservices for handling geospatial data, images, and large binary data
-                with authentication and access control.</li>
-                <li>Achieved a 50% reduction in latency by implementing GRPC stream APIs for large binary data transfers, conducted
-                load testing, identified critical bugs, and performed fixes.</li>
-                <li>Integrated AWS Batch processes, reducing container load by 15% and significantly cutting AWS costs. Acquired
-                proficiency in C# and delivered critical release APIs within a week.</li>
-                <li>Designed and modeled an event-based internal notification platform utilizing AWS SNS and SQS, capable of handling
-                over 1000 requests concurrently.</li>
-                <li>Pioneered a serverless service orchestrator, replacing outdated technology with AWS Step Functions and Lambda,
-                resulting in a 60% cycle time reduction.</li>
-                <li>Translated critical code from MATLAB to Python, increasing scalability and reducing latency by more than 60
-                • Orchestrated cross-functional teams to establish standard interface models and proposed OpenTelemetry integration
-                for serverless architecture tracing.</li>
-            </ul></p>
-
-            <li><strong>Software Development Engineer Intern, Eagleview, Bengaluru</strong></li>
-            <p><ul>
-                <li>Programmed scalable Go microservices, improved API documentation for resource onboarding, and proposed ELK stack integration for enhanced system tracing. </li>
-                <li>Initiated a side project to prototype a Deployment Dashboard, leveraging Jenkins, HTML, CSS, JavaScript, and AWS S3 to monitor multi-environment deployments.</li>
-            </ul></p>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at: <a href="mailto:varundevang@gmail.com">varundevang@gmail.com</a></p>
-    </section>
-
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 VTS</p>
-    </footer>
+    </footer> -->
 </body>
 </html>

@@ -1,62 +1,359 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+
+
+    margin: 0; /* Remove margin for the body */
+    background-color: #faf3e0; /* Lighter cream background */
+    color: #e4dcd5; /* Darker brown text */
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full viewport height */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Flex container for content body */
+.content-body {
+    display: flex; /* Flex layout */
+    width: 100%; /* Full width */
 }
 
-header h1 {
-    margin: 0;
+/* Flex container for header */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #392205; /* Darker brown background */
+    color: #faf3e0; /* Cream text */
+    padding: 20px;
+    width: 25%; /* Set header width to 25% */
+    min-width: 300px; /* Ensure a minimum width */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fix position */
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+    overflow-y: auto; /* Scroll if content overflows */
 }
 
-header p {
-    margin: 5px 0;
+/* Main content styling */
+.main-content {
+    margin-left: 25%; /* Leave space for the fixed header */
+    padding: 20px; /* Add some padding */
+    width: 75%; /* Occupy the remaining width */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: white; /* Lighter cream background */
 }
 
+#dynamic-content {
+    /* padding: 20px; */
+    border-radius: 10px;
+}
+
+/* Other styles remain unchanged */
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #f6f2ef; /* Warmer, medium brown border around the image */
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.name {
+    color: white;
+    font-size: x-large;
+    padding-bottom:30px;
+}
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 20px 0;
+    width: 100%;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #faf3e0; /* Cream text */
+    font-size: 18px;
+    padding: 10px 200px;
+    border-radius: 5px;
+    border-color: white;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
+nav ul li a:hover, nav ul li a.selected {
+    background-color: #d49a6a; /* Warmer, mid-tone brown for hover */
+    color: #3a1f04; /* Darker brown text on hover */
+}
+
+h1, h2 {
+    color: black; /* Darker brown for headings */
+}
+
+
+/* Contact section */
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: #d49a6a; /* Warmer, medium brown icons */
+    margin-right: 10px;
+}
+
+.contact-item a {
+    color: rgb(224, 202, 202);
+}
+
+.contact-item a:hover {
+    color: #5a3e1b; /* Darker brown on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #5a3e1b; /* Darker brown background */
+    color: #faf3e0; /* Cream text */
+    padding: 10px;
     border-radius: 5px;
 }
 
-section h2 {
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .header-content {
+        width: 100%;
+        position: relative; /* Change fixed to relative on smaller screens */
+        height: auto; /* Let height adjust based on content */
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+}
+
+/* Basic section styling */
+.education {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Card container */
+.card {
+    display: flex;
+    align-items: flex-start;
+    background-color:#ebeff4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.school-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Content inside the card */
+.card-content {
+    max-width: 650px;
+}
+
+.card-content h3 {
     margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
 }
 
-footer {
-    text-align: center;
+.card-content p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .school-logo {
+        margin-bottom: 15px;
+    }
+
+    .card-content {
+        max-width: 100%;
+    }
+}
+
+/* Work Experience Section */
+.work-experience {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+    text-align: left;
+}
+
+/* Larger Work Experience Card */
+.work-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ebeff4;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Company logo */
+.company-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 10%;
+    margin-right: 25px;
+}
+
+/* Content inside the work card */
+.work-card-content {
+    max-width: 700px;
+}
+
+.work-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.work-card-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.work-card-content ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-logo {
+        margin-bottom: 15px;
+    }
+
+    .work-card-content {
+        max-width: 100%;
+    }
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    background-color: white;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    transform: rotate(-3deg); /* Slight rotation for a random effect */
+    overflow: hidden; /* Ensure the image doesn't spill out */
 }
 
-.bold{
-    font-weight: bold;
+.photo-frame:hover {
+    transform: rotate(0deg); /* Straightens when hovered */
+    width: auto;
+    height: auto;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 10px solid white; /* Mimic the bottom space of Polaroid */
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.photo-frame:hover img {
+    object-fit: contain; /* Ensures the image retains its original aspect ratio */
+    width: 300px; /* Original size */
+    height: 400px; /* Original size */
+    max-width: 100%; /* Still constrained by the frame if needed */
+    max-height: 100%;
+    transform: scale(1.5); /* Enlarge the image while maintaining the ratio */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Add variety in rotation for a more dynamic look */
+.photo-frame:nth-child(odd) {
+    transform: rotate(2deg);
+}
+
+.photo-frame:nth-child(even) {
+    transform: rotate(-2deg);
 }

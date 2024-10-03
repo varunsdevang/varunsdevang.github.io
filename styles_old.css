@@ -1,0 +1,238 @@
+body {
+    font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.contact-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.contact-item {
+    margin: 10px 0;
+}
+.contact-item i {
+    margin-right: 10px;
+    color: #007bb5; /* LinkedIn blue */
+}
+.contact-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #f7f1f1; /* Default text color */
+    font-weight: 400; /* Normal weight */
+    padding: 5px 0;
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect to make text bolder */
+
+
+.selected {
+    color: #dbd3d2; /* Text color on hover */
+    font-weight: 700; /* Bolder weight */
+}
+
+/* Basic section styling */
+.education {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Card container */
+.card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.school-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Content inside the card */
+.card-content {
+    max-width: 650px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-content p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .school-logo {
+        margin-bottom: 15px;
+    }
+
+    .card-content {
+        max-width: 100%;
+    }
+}
+
+/* Work Experience Section */
+.work-experience {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+    text-align: left;
+}
+
+/* Larger Work Experience Card */
+.work-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Company logo */
+.company-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 10%;
+    margin-right: 25px;
+}
+
+/* Content inside the work card */
+.work-card-content {
+    max-width: 700px;
+}
+
+.work-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.work-card-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.work-card-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-logo {
+        margin-bottom: 15px;
+    }
+
+    .work-card-content {
+        max-width: 100%;
+    }
+}
