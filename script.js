@@ -27,12 +27,13 @@ function loadContent(page) {
                             <li>Leveraged advanced machine learning models such as YOLO-v7 for object detection, SuperPoint for feature extraction, and a PID controller for precise movement.</li>
                             <li>Integrated computer vision and control systems for real-time human tracking in dynamic environments.</li>
                         </ul>
+                        <img src="./pics/Robot.png" alt="Robots">
                     </div>
                 </div>
 
                 <div class="work-card">
                     <div class="work-card-content">
-                        <h3>Quote Classification and Interpretation</h3>
+                        <h3>Quote Classification and Interpretation <a href="https://github.com/varunsdevang/QuoteMI" target="_blank"><i class="fab fa-github"></i></a></h3>
                         <ul>
                             <li>Fine-tuned Transformer models like BERT, GPT-2, and T5 for multi-label classification of quotes.</li>
                             <li>Explored prompting techniques on T5 and Gemma models to enhance quote interpretation.</li>
@@ -92,18 +93,61 @@ function loadContent(page) {
             <section class="work-experience">
                 <h2>Work Experience</h2>
                 <br/>
+
+                <div class="work-card">
+                    <img src="./pics/umass_logo.png" alt="UMass" class="company-logo">
+                    <div class="work-card-content">
+                        <h3>Grader, Manning College of Information and Computer Science, UMass, Amherst</h3>
+                        <p><strong>June 2024 – Nov 2024</strong></p>
+                        <ul>
+                            <li>Evaluated and graded assignments, projects, and exams, ensuring accurate assessment of students' understanding of software engineering principles.</li>
+                            <li>Provided constructive feedback to students, helping them improve their coding practices, design techniques, and problem-solving skills.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="./pics/umass_logo.png" alt="UMass" class="company-logo">
+                    <div class="work-card-content">
+                        <h3>Graduate Student Researcher, <a href="https://hcr.cs.umass.edu/people.html" target="_blank">Human Centered Robotics Lab </a>, UMass, Amherst</h3>
+                        <p><strong>June 2024 – Nov 2024</strong></p>
+                        <ul>
+                            <li>Optimized a model for frame-level fault detection in collaborative autonomous systems, processing 30 images per timestep from 5 agents in the DeepAccident dataset.</li>
+                            <li>Conducted an in-depth analysis of dataset structure and identified key challenges impacting detection outcomes.</li>
+                            <li> Designed and implemented a denoising-based fault detection model with Vector Quantized GANs and Graph Attention Networks as pre-training, exploring enhanced learning for fault detection in multi-agent autonomous systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="./pics/umass_logo.png" alt="UMass" class="company-logo">
+                    <div class="work-card-content">
+                        <h3>Dining Hall Supervisor (Part-Time), Auxiliary Enterprises, UMass, Amherst</h3>
+                        <p><strong>Sep 2023 – Dec 2024</strong></p>
+                        <ul>
+                            <li>Led and motivated team members to maintain high performance and productivity, ensuring smooth operations across all work areas.</li>
+                            <li>Strategically managed employee break schedules to balance workload and optimize efficiency.</li>
+                            <li>Demonstrated strong attention to detail by ensuring allergens were accurately identified and communicated, fostering a safe and compliant work environment.</li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <div class="work-card">
                     <img src="https://www.eagleview.com/wp-content/themes/eagleview_new/assets/svg/svgs/eagleview_logo-color.svg" alt="Eagleview" class="company-logo">
                     <div class="work-card-content">
                         <h3>Software Development Engineer - I, Eagleview, Bengaluru</h3>
+                        <p><strong>Aug 2020 – Dec 2022</strong></p>
                         <ul>
-                            <li>Developed and maintained Assess services, an online drone imagery tool for property assessment.</li>
-                            <li>Implemented scalable Go REST and GRPC microservices for handling geospatial data, images, and large binary data with authentication and access control.</li>
-                            <li>Reduced latency by 50% with GRPC stream APIs for large binary data transfers, conducted load testing, and fixed critical bugs.</li>
-                            <li>Integrated AWS Batch, reducing container load by 15% and cutting AWS costs significantly. Delivered critical release APIs in C# within a week.</li>
-                            <li>Designed an event-based internal notification platform using AWS SNS and SQS, handling over 1000 concurrent requests.</li>
-                            <li>Replaced outdated tech with AWS Step Functions and Lambda, reducing cycle time by 60%.</li>
-                            <li>Translated MATLAB code to Python, increasing scalability and reducing latency by over 60%. Proposed OpenTelemetry integration for serverless architecture tracing.</li>
+                            <li>Assisted in designing and led implementation of an event-based notification service handling push, email, and iOS notifications via AWS SQS and SNS, supporting 1,000+ concurrent requests.</li>
+                            <li>Gained proficiency in C# and delivered critical release APIs within one week.</li>
+                            <li>Delivered 6+ Golang and Python microservices, collaborating with cross-continental agile teams.</li>
+                            <li>Contributed to migrating a legacy platform to a serverless orchestrator using AWS Step Functions and Lambda, reducing service time from 3 hours to 45 minutes.</li>
+                            <li>Achieved 60% latency reduction for large file downloads by implementing gRPC stream APIs.</li>
+                            <li>Enhanced service performance and resolved critical bugs through regular load and performance testing.</li>
+                            <li>Translated business-critical MATLAB code handling geospatial data to Python, increasing scalability and reducing latency by over 70%.</li>
+                            <li>Participated in the full SDLC of <a href="https://www.eagleview.com/product/eagleview-assess/" target="_blank" >Assess</a>, an online imagery inspection tool with a $1M+ projected revenue.</li>
+                            <li>Proposed OpenTelemetry integration for serverless tracing, improving logging and debugging capabilities.</li>
+                            <li>Participated in code reviews to ensure clean, tested, readable and maintainable codebase to maintain 90% code coverage.</li>
                         </ul>
                     </div>
                 </div>
@@ -112,12 +156,26 @@ function loadContent(page) {
                     <img src="https://www.eagleview.com/wp-content/themes/eagleview_new/assets/svg/svgs/eagleview_logo-color.svg" alt="Eagleview" class="company-logo">
                     <div class="work-card-content">
                         <h3>Software Development Engineer Intern, Eagleview, Bengaluru</h3>
+                        <p><strong>Jan 2020 – June 2020</strong></p>
                         <ul>
-                            <li>Programmed scalable Go microservices, improved API documentation, and proposed ELK stack integration for system tracing.</li>
-                            <li>Prototyped a Deployment Dashboard using Jenkins, HTML, CSS, JavaScript, and AWS S3 to monitor multi-environment deployments.</li>
+                            <li>Delivered 15+ APIs for a critical process and improved API documentation, reducing cross-team dependency and cutting development time by 15%..</li>
+                            <li>Presented a study on ElasticSearch-Logstash-Kibana (ELK) stack for observability, demonstrating its potential to trace points of failure within 30 minutes and deliver key analytical insights.</li>
+                            <li>Proto-typed a dashboard to automate version tracking, cutting manual checks and documentation time by 50%.</li>
                         </ul>
                     </div>
                 </div>
+
+            <div class="work-card">
+                <img src="/pics/pes_logo.png" alt="PES University" class="company-logo">
+                <div class="work-card-content">
+                <h3>Research Intern, Center for Cloud and Big Data, PES University, Bengaluru</h3>
+                <p><strong>May 2018 – Aug 2018</strong></p>
+                <ul>
+                    <li>Researched on federated clouds using OpenStack.</li>
+                    <li>Conducted a feasibility study of federated container service using Mesos in Openstack.</li>
+                </ul>
+            </div>
+        </div>
             </section>
         `;
     }

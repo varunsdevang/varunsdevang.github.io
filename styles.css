@@ -36,7 +36,7 @@ body {
     position: fixed; /* Fix position */
     left: 0; /* Align to the left */
     top: 0; /* Align to the top */
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto ; /* Scroll if content overflows */
 }
 
 /* Main content styling */
@@ -46,7 +46,7 @@ body {
     width: 75%; /* Occupy the remaining width */
     height: 100vh; /* Full viewport height */
     overflow-y: auto; /* Allow vertical scrolling */
-    background-color: white; /* Lighter cream background */
+    background-color: rgb(232, 229, 210); /* Lighter cream background */
 }
 
 #dynamic-content {
@@ -288,6 +288,10 @@ footer {
     color: #555;
 }
 
+.work-card-content img {
+    align-items: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .work-card {
@@ -356,4 +360,8 @@ footer {
 
 .photo-frame:nth-child(even) {
     transform: rotate(-2deg);
+}
+
+.work-card p {
+    color: #333;
 }
