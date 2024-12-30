@@ -6,8 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-
+    font-family: 'Lato';
 
     margin: 0; /* Remove margin for the body */
     background-color: #faf3e0; /* Lighter cream background */
@@ -291,6 +290,7 @@ footer {
 .work-card-content img {
     align-items: center;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

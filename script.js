@@ -63,6 +63,17 @@ function loadContent(page) {
                         </ul>
                     </div>
                 </div>
+
+                <div class="work-card">
+                    <div class="work-card-content">
+                        <h3><a href="https://ijircce.com/admin/main/storage/app/pdf/b6CnMHB1HXbKNxts7G5qYX2RxlBthjOCYbHgTVp0.pdf" target="_blank" >Impact of Hofstede’s Cultural Dimensions on Intelligent Ethical Agent</a></h3>
+                        <ul>
+                        <li>Explored moral dilemmas in autonomous vehicles, training AI models for ethically acceptable decision-making using data from the Moral Machine experiment.</li>
+                        <li>Evaluated model performance by analyzing accuracies across multiple training techniques and methodologies. </li>
+                        <li>Investigated cultural influence on AI decisions by incorporating Hofstede's six dimensions of national cultures during data preprocessing. </li>
+                    <ul>
+                        </div>
+                </div>
             </section>
 `;
     } else if (page === 'academics') {
@@ -115,6 +126,7 @@ function loadContent(page) {
                             <li>Optimized a model for frame-level fault detection in collaborative autonomous systems, processing 30 images per timestep from 5 agents in the DeepAccident dataset.</li>
                             <li>Conducted an in-depth analysis of dataset structure and identified key challenges impacting detection outcomes.</li>
                             <li> Designed and implemented a denoising-based fault detection model with Vector Quantized GANs and Graph Attention Networks as pre-training, exploring enhanced learning for fault detection in multi-agent autonomous systems.</li>
+                            <li> Optimized a non-linear MPC-WBIC controller through semi-black box fine-tuning, tailoring it for improved performance on the Go1 robot platform.</li>
                         </ul>
                     </div>
                 </div>
