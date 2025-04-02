@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="version" content="3.0.1">
+    <meta name="version" content="3.0.2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VTS</title>
-    <link rel="stylesheet" href="styles.css?ver=4">
+    <link rel="stylesheet" href="styles.css?ver=5">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script defer src="script.js?ver=3"></script> <!-- Link to JavaScript file -->
+    <script defer src="script.js?ver=4"></script> <!-- Link to JavaScript file -->
 </head>
 
 <body >
@@ -19,6 +19,14 @@
                 <img src="pics/varun.jpg" alt="Profile Picture" class="profile-pic">
                 <h1 class="name">Varun Tarikere Shankarappa</h1>
             </div>
+            <div class="about">
+                <p>
+                    I'm an engineer with nearly 3 years of experience in delivering secure, scalable software solutions. I have dabbled with  Web Development, Data Science, LLMs, Robots and many more!
+
+                    A curious learner and passionate problem solver, I thrive on tackling complex challenges and turning them into impactful solutions. Whether it's coding the future or building it, I'm always ready for the next adventure!
+                </p>
+            </div>
+            
             <nav>
                 <ul>
                     <li onclick="loadContent(event, 'experience')" onload="loadContent(this, 'experience')""> Experience</li>
@@ -34,10 +42,10 @@
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:varundevang@gmail.com">varundevang@gmail.com</a>
                     </div>
-                    <div class="contact-item">
+                    <!-- <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <span>(413) 404-2490</span>
-                    </div>
+                    </div> -->
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <a href="https://www.linkedin.com/in/tsvarun" target="_blank">LinkedIn</a>
@@ -96,6 +104,7 @@
                             <h3>Dining Hall Supervisor (Part-Time), Auxiliary Enterprises, UMass, Amherst</h3>
                             <p><strong>Sep 2023 – Dec 2024</strong></p>
                             <ul>
+                                <li> Handled 2000+ students per meal session</li>
                                 <li>Led and motivated team members to maintain high performance and productivity,
                                     ensuring smooth operations across all work areas.</li>
                                 <li>Strategically managed employee break schedules to balance workload and optimize
@@ -204,6 +213,21 @@
                 <section id="projects" class="work-experience">
                     <h2>Projects</h2>
                     <br />
+
+                    <div class="work-card">
+                        <div class="work-card-content">
+                            <h3>Distributed Rate Limiter <a
+                                href="https://github.com/varunsdevang/KubeOps" target="_blank"><i
+                                    class="fab fa-github"></i></a></h3></h3>
+                            <ul>
+                                <li>Designed a gRPC-based rate-limiting system using Redis for storage.</li>
+                                <li>Implemented a FastAPI-based dummy service to validate request throttling.</li>
+                                <li>Developed a Kubernetes operator to dynamically configure rate limits via CRDs.</li>
+                                <li>Deployed services using Docker and Kubernetes with automated policy enforcement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                     <div class="work-card">
                         <div class="work-card-content">
                             <h3>Human Following Robot</h3>
