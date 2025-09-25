@@ -1,32 +1,105 @@
+// Modern Portfolio JavaScript
+class PortfolioApp {
+  constructor() {
+    this.currentTheme = localStorage.getItem('theme') || 'light';
+    this.init();
+  }
+
+  init() {
+    this.setupTheme();
+    this.setupNavigation();
+    this.setupAnimations();
+  }
+
+  // Theme Management
+  setupTheme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    
+    this.applyTheme(this.currentTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      this.toggleTheme();
+    });
+  }
+
+  toggleTheme() {
+    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.applyTheme(this.currentTheme);
+    localStorage.setItem('theme', this.currentTheme);
+  }
+
+  applyTheme(theme) {
+    const themeIcon = document.getElementById('themeIcon');
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    if (theme === 'dark') {
+      themeIcon.className = 'fas fa-sun';
+    } else {
+      themeIcon.className = 'fas fa-moon';
+    }
+  }
+
+  // Navigation Management
+  setupNavigation() {
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    this.setActiveSection('experience');
+    
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = item.dataset.section;
+        this.setActiveSection(sectionId);
+      });
+    });
+  }
+
+  setActiveSection(sectionId) {
+    // Update navigation
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.dataset.section === sectionId) {
+        item.classList.add('active');
+      }
+    });
+
+    // Update content sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+      if (section.id === sectionId) {
+        section.classList.add('active');
+      }
+    });
+  }
+
+  // Animation Setup
+  setupAnimations() {
+    const cards = document.querySelectorAll('.work-card, .education-card, .project-card');
+    
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+      });
+    });
+  }
+}
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', () => {
+  new PortfolioApp();
+});
+
+// Legacy function for backward compatibility
 function loadContent(event, section) {
-
-    //event.preventDefault();
-
-    const listItems = document.querySelectorAll('nav ul li');
-
-    // Remove the 'active' class from all <li> elements
-    listItems.forEach(item => {
-        item.classList.remove('selected');
-    });
-
-    // Add the 'active' class to the clicked <li> (parent of the anchor)
-    const clickedLi = event.target;
-    if (clickedLi) {
-        clickedLi.classList.add('selected');
-    }
-
-
-    // Hide all sections
-    const sections = document.querySelectorAll('.dynamic-content');
-    sections.forEach(sec => {
-        sec.style.display = 'none';
-    });
-
-    // Show the selected section
-    const activeSection = document.getElementById(section);
-    if (activeSection) {
-        activeSection.style.display = 'block';
-    }
+  const app = new PortfolioApp();
+  app.setActiveSection(section);
 }
 
 // function loadContent(page) {
